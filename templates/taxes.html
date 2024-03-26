@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Taxes</title>
+    <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>Your Taxes</h1>
+    <p>Taxes on ${{ gross_income }}</p>
+    <p>Provincial Amount: ${{ p_total }}</p>
+    <p>Federal Amount: ${{ f_total }}</p>
+    <p>TOTAL: ${{ total_taxes }}</p>
+
+    <form action="/taxes">
+        <input type="number" name="gross_income" id="gross" placeholder="Enter your gross income" />
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023 Income Tax Calculator</title>
+    <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet" />
+</head>
+<body>
+    <h1>2023 Income Tax Calculator</h1>
+    <form action="/taxes">
+        <input type="number" name="gross_income" id="gross_income" placeholder="Enter your gross income" />
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
